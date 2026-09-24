@@ -7,6 +7,7 @@ const heroTabs=document.querySelectorAll('[data-hero-tab]');
 const heroPanes=document.querySelectorAll('[data-hero-pane]');
 const heroImages=document.querySelectorAll('[data-hero-image]');
 const heroCurrent=document.querySelector('[data-hero-current]');
+const heroKicker=document.querySelector('[data-hero-kicker]');
 let activeHero=0;
 let heroTimer;
 
@@ -28,6 +29,7 @@ function setHeroPerspective(index, userInitiated=false){
     image.setAttribute('aria-hidden',String(!active));
   });
   if(heroCurrent) heroCurrent.textContent=String(index+1).padStart(2,'0');
+  if(heroKicker) heroKicker.textContent=`${String(index+1).padStart(2,'0')} / PERSPECTIVE`;
   if(userInitiated) restartHeroTimer();
 }
 
