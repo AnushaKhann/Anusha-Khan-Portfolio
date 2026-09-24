@@ -14,4 +14,5 @@ Then open `http://localhost:8080`.
 
 ## Deploy
 
+Deploy link:
 `https://anusha-khan-portfolio.vercel.app/`
